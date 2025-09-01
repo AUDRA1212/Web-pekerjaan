@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Pekerjaan</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="/png/logo.png" alt="Logo">
+  </div>
+  <nav>
+    <a href="/home/Index.html">Beranda</a>
+    <a href="/pekerja/pekerja.html">Pekerjaan</a>
+    <a href="/riwayat/riwayat.html">Riwayat</a>
+    <a href="/profile/profile.html">Profile</a>
+    <a href="/pesanan/pesanan.html">Pesanan</a>
+    <div class="user">👤
+        <div class="dropdown">
+        <button onclick="logout()">Keluar</button>
+      </div>
+    </div>
+  </nav>
+
+      
+</header>
+<script>
+  // toggle dropdown kalau user diklik
+  document.querySelector(".user").addEventListener("click", function(e) {
+    e.stopPropagation();
+    this.classList.toggle("active");
+  });
+
+  // tutup dropdown kalau klik di luar
+  document.addEventListener("click", function() {
+    document.querySelector(".user").classList.remove("active");
+  });
+
+  // fungsi logout
+  function logout() {
+    alert("Anda berhasil keluar!");
+    window.location.href = "/login.html"; // arahkan ke halaman login
+  }
+</script>
+
+
+
+<div class="container">
+  <div class="welcome">Welcome back</div>
+  <div class="banner">
+    <img src="/png/banner.png" alt="Banner" />
+  </div>
+</div>
+
+
+  <!-- Job Section -->
+  <div class="job-section">
+    <h3>Pekerjaan</h3>
+    <div class="job-list">
+      <div class="job-card">
+        <div class="job-image">
+          <img src="/png/desainer.jpeg" alt="Desainer">
+        </div>
+        <p>Designer</p>
+        <button class="btn-view"><a href="/viewhome/viewhomedessainer.html">Lihat</a></button>
+      </div>
+
+      <div class="job-card">
+        <div class="job-image">
+          <img src="/png/programmer.jpeg" alt="Programmer">
+        </div>
+        <p>Programmer</p>
+        <button class="btn-view"><a href="/viewhome/viewhomeprogramer.html">Lihat</a></button>
+      </div>
+
+      <div class="job-card">
+        <div class="job-image">
+          <img src="/png/uiux.jpeg" alt="UI/UX">
+        </div>
+        <p>UI/UX</p>
+        <button class="btn-view"><a href="/viewhome/viewhomeuiux.html">Lihat</a></button>
+      </div>
+
+      <div class="job-card">
+        <div class="job-image">
+          <img src="/png/marketing.jpeg" alt="Marketing">
+        </div>
+        <p>Marketing</p>
+        <button class="btn-view"><a href="/viewhome/viewhomemarketing.html">Lihat</a></button>
+      </div>
+
+      <div class="job-card">
+        <div class="job-image">
+          <img src="/png/data analisyt.jpeg" alt="Data Analyst">
+        </div>
+        <p>Data Analyst</p>
+        <button class="btn-view"><a href="/viewhome/viewhomedataanaliyst.html">Lihat</a></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Info Section -->
+  <div class="info-section">
+  <h3>Informasi Pekerjaan</h3>
+
+  <div class="info-card">
+    <div class="info-text">
+      <h4>Designer</h4>
+      <p></p>
+      <a href="/viewhome/viewhomedessainer.html" class="btn-detail">Lihat Detail</a>
+    </div>
+    <img src="/png/desainer1.jpeg" alt="Desainer Grafis">
+  </div>
+
+  <div class="info-card">
+    <div class="info-text">
+      <h4>Programmer Web</h4>
+      <p></p>
+      <a href="/viewhome/viewhomeprogramer.html" class="btn-detail">Lihat Detail</a>
+    </div>
+    <img src="/png/PROGRAMER WEB.jpg" alt="Programmer Web">
+  </div>
+
+  <div class="info-card">
+    <div class="info-text">
+      <h4>Data Analyst</h4>
+      <p></p>
+      <a href="/viewhome/viewhomedataanaliyst.html" class="btn-detail">Lihat Detail</a>
+    </div>
+    <img src="/png/data analisyt.jpeg" alt="Data Scientist">
+  </div>
+
+  <div class="info-card">
+    <div class="info-text">
+      <h4>Digital Marketing</h4>
+      <p></p>
+      <a href="/viewhome/viewhomemarketing.html" class="btn-detail">Lihat Detail</a>
+    </div>
+    <img src="/png/digital marketing.jpeg" alt="Digital Marketing">
+  </div>
+
+  <div class="info-card">
+    <div class="info-text">
+      <h4>UI/UX Designer</h4>
+      <p></p>
+      <a href="/viewhome/viewhomeuiux.html" class="btn-detail">Lihat Detail</a>
+    </div>
+    <img src="/png/uiux1.jpeg" alt="UI/UX Designer">
+  </div>
+</div>
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+  <div class="footer-top">
+    <h4>Hubungi Kami</h4>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/vaulenss_audraaa"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/8384433781"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.linkedin.com/in/vaulens-audra-pulyara-a97299346/"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>2025 Vaulens Audra Pulyara. Karya yang Dikumpulkan dari Beberapa Referensi</p>
+  </div>
+</footer>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/4b5d6a2f0a.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

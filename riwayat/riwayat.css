@@ -1,0 +1,109 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: #f5f5f5;
+                  margin: 0;
+            font-family: Arial, sans-serif;
+    }
+/* HEADER */
+header {
+  background: #fff;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+  display: block;
+  margin-right: 20px;
+}
+
+nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.user {
+  margin-left: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+    
+    
+
+
+/* kontainer utama */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* judul */
+.container h2 {
+  margin-bottom: 20px;
+  color: #222;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* tabel */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden; /* biar sudut tabel ikut rounded */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+thead {
+  background: #f0f4f9;
+}
+
+th, td {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  font-weight: bold;
+  color: #333;
+  border-bottom: 2px solid #e0e6ed;
+}
+
+td {
+  color: #555;
+  border-bottom: 1px solid #eee;
+}
+
+/* zebra striping */
+tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+/* hover effect */
+tbody tr:hover {
+  background: #f1f7ff;
+  transition: 0.2s;
+}

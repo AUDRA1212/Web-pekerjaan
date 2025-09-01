@@ -1,0 +1,148 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #dbeafe, #e0f2fe); /* biru muda soft */
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Background Shape */
+.background-shape {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  z-index: 0;
+}
+
+/* Container */
+.login-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 380px;
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Logo */
+.logo-box {
+  margin-bottom: 20px;
+}
+.logo {
+  width: 80px;
+  height: auto;
+}
+
+/* Title */
+.login-container h2 {
+  font-size: 22px;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+
+/* Icon di kiri (user, email, lock) */
+/* Icon di kiri (user, email, lock) */
+.input-group i.fa-user,
+.input-group i.fa-envelope,
+.input-group .left-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* Input field */
+/* supaya icon kiri & kanan ga bentrok */
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+    margin-bottom: 15px;
+}
+
+.input-group .left-icon {
+  position: absolute;
+  left: 12px;
+  color: #94a3b8;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 40px 12px 38px; /* ruang kiri utk lock, kanan utk eye */
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+}
+
+.input-group .toggle-password {
+  position: absolute;
+  right: 12px;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(14,165,233,0.3);
+}
+
+/* Link */
+.login-container p {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #475569;
+}
+.login-container p a {
+  color: #0ea5e9;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.login-container p a:hover {
+  color: #0369a1;
+}

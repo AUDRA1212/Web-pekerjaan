@@ -1,0 +1,278 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+/* HEADER */
+header {
+  background: #fff;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+  display: block;
+  margin-right: 20px;
+}
+
+nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.user {
+  margin-left: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+    /* dropdown */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 40px;
+      right: 0;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 10px;
+      z-index: 1000;
+    }
+
+    .dropdown button {
+      background: none;
+      border: none;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 6px 12px;
+      border-radius: 6px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .dropdown button:hover {
+      background: #f5f5f5;
+    }
+
+    /* aktifkan dropdown */
+    .user.active .dropdown {
+      display: block;
+    }
+
+
+
+
+
+/* CONTAINER UTAMA */
+.container,
+.job-section,
+.info-section {
+  max-width: 1200px;   /* batasi lebar */
+  margin: 0 auto;      /* tengah */
+  padding: 0 20px;     /* jarak kiri kanan */
+}
+
+.container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.welcome {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.banner {
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+/* JOB SECTION */
+.job-section {
+  margin-bottom: 30px;
+}
+
+.job-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* biar responsif */
+}
+
+.job-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  flex: 1 1 200px; /* bisa mengecil di layar kecil */
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.job-image {
+  width: 100%;
+  height: 100px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.job-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+.btn-view {
+  background: #ddd;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.btn-view a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* INFO SECTION */
+info-section h3 {
+  margin-bottom: 15px;
+}
+
+.info-card {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+}
+
+.info-card img {
+  width: 120px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.info-text h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.info-text p {
+  margin: 5px 0 10px; /* kasih jarak bawah biar ga nempel tombol */
+  font-size: 14px;
+  color: #666;
+}
+
+.btn-detail {
+  display: inline-block;
+  margin-top: 5px; /* jarak dari teks */
+  background: #007bff;
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-detail:hover {
+  background: #0056b3;
+}
+
+/* FOOTER (biarkan full lebar) */
+footer {
+  background: #fff;
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer-top {
+  padding: 20px 0 10px;
+}
+
+.footer-top h4 {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.social-icons a {
+  text-decoration: none; /* hilangkan garis bawah */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #bbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+
+
+.social-icons a:hover {
+  background: #4da3ff;
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  border-top: 2px solid #999999;
+  padding: 12px 0;
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  color: #888;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar - VVAP</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Background Shape -->
+  <div class="background-shape"></div>
+
+  <div class="login-container">
+    <!-- Logo -->
+    <div class="logo-box">
+      <img src="/png/logo.png" alt="VVAP Logo" class="logo">
+    </div>
+
+    <h2>Buat Akun Baru</h2>
+    <form onsubmit="return validateRegister()">
+      <div class="input-group">
+        <i class="fa fa-user"></i>
+        <input type="text" id="name" placeholder="Nama lengkap" required>
+      </div>
+
+      <div class="input-group">
+        <i class="fa fa-envelope"></i>
+        <input type="email" id="email" placeholder="Email" required>
+      </div>
+
+<div class="input-group">
+  <i class="fa fa-lock left-icon"></i>
+  <input type="password" id="password" placeholder="Password" required>
+  <i class="fa fa-eye toggle-password" onclick="togglePassword('password', this)"></i>
+</div>
+
+<div class="input-group">
+  <i class="fa fa-lock left-icon"></i>
+  <input type="password" id="confirm" placeholder="Konfirmasi password" required>
+  <i class="fa fa-eye toggle-password" onclick="togglePassword('confirm', this)"></i>
+</div>
+
+
+      <button type="submit">Daftar</button>
+      <p>Sudah punya akun? <a href="login.html">Login</a></p>
+    </form>
+  </div>
+
+  <script>
+    // Validasi form register
+    function validateRegister() {
+      let pass = document.getElementById("password").value;
+      let confirm = document.getElementById("confirm").value;
+
+      if (pass !== confirm) {
+        alert("Password tidak sama!");
+        return false;
+      }
+      alert("Pendaftaran berhasil! Silakan login.");
+      window.location.href = "login.html";
+      return false;
+    }
+
+    // Toggle show/hide password
+function togglePassword(id, el) {
+  const input = document.getElementById(id);
+  if (input.type === "password") {
+    input.type = "text";
+    el.classList.remove("fa-eye");
+    el.classList.add("fa-eye-slash");
+  } else {
+    input.type = "password";
+    el.classList.remove("fa-eye-slash");
+    el.classList.add("fa-eye");
+  }
+}
+
+  </script>
+</body>
+</html>
