@@ -43,34 +43,46 @@
 </script>
 
 
-  <div class="profile-container">
-    <div class="profile-header">
-        <h2>Profil</h2>
-        <div class="avatar"></div>
-    </div>
+<div class="profile-container">
+  <div class="profile-header">
+    <h2>Profil</h2>
+    <div class="avatar"></div>
+  </div>
 
-    <div class="profile-info">
-        <div class="info-item">
-            <h4>Nama</h4>
-            <p>Vaulens Audra Pulyara</p>
-        </div>
-        <div class="info-item">
-            <h4>Riwayat Pekerjaan</h4>
-            <p>PT. Contoh Jaya</p>
-            <p>Freelance Designer</p>
-        </div>
-        <div class="info-item">
-            <h4>CV</h4>
-            <p>cv_vaulens.pdf</p>
-        </div>
-        <div class="info-item">
-            <h4>Media Sosial</h4>
-            <p>@vaulensaudra</p>
-        </div>
+  <div class="profile-info">
+    <div class="info-item">
+      <h4>Nama</h4>
+      <p>Vaulens Audra Pulyara</p>
     </div>
+    <div class="info-item">
+      <h4>Riwayat Pekerjaan</h4>
+      <p>PT. Contoh Jaya</p>
+      <p>Freelance Designer</p>
+    </div>
+    <div class="info-item">
+      <h4>CV</h4>
+      <p>cv_vaulens.pdf</p>
+    </div>
+    <div class="info-item">
+      <h4>Media Sosial</h4>
+      <p>@vaulensaudra</p>
+    </div>
+  </div>
 
-    <button class="logout-btn">Keluar</button>
+  <!-- tombol aksi -->
+  <div class="action-btns">
+    <button class="edit-btn" onclick="editProfile()">Edit</button>
+    <button class="logout-btn" onclick="logout() ">Keluar</button>
+  </div>
 </div>
+<button class="edit-btn" onclick="editProfile()">Edit</button>
+
+<script>
+  function editProfile() {
+    window.location.href = "/editprofile/editprofile.html";
+  }
+</script>
+
 
 </body>
 </html>

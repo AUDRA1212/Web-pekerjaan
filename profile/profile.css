@@ -136,19 +136,44 @@ nav a {
         color: #666;
     }
 
-    .logout-btn {
-        display: block;
-        margin: 25px auto 0;
-        padding: 10px 25px;
-        background: #ff4d4d;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 14px;
-        transition: background 0.2s;
-    }
+/* style umum untuk tombol aksi */
+.action-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
 
-    .logout-btn:hover {
-        background: #e63e3e;
-    }
+.action-btns button {
+    padding: 10px 28px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.25s ease-in-out;
+}
+
+/* tombol Edit */
+.edit-btn {
+    background: #4da6ff;
+    color: #fff;
+}
+
+.edit-btn:hover {
+    background: #1e90ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 144, 255, 0.3);
+}
+
+/* tombol Keluar */
+.logout-btn {
+    background: #ff4d4d;
+    color: #fff;
+}
+
+.logout-btn:hover {
+    background: #e63e3e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(230, 62, 62, 0.3);
+}
