@@ -16,9 +16,34 @@
     <a href="/riwayat/riwayat.html">Riwayat</a>
     <a href="/profile/profile.html">Profile</a>
     <a href="/pesanan/pesanan.html">Pesanan</a>
-    <div class="user">👤</div>
-    </nav>
-  </header>
+    <div class="user">👤
+        <div class="dropdown">
+        <button onclick="logout()">Keluar</button>
+      </div>
+    </div>
+  </nav>   
+</header>
+
+<script>
+  // toggle dropdown kalau user diklik
+  document.querySelector(".user").addEventListener("click", function(e) {
+    e.stopPropagation();
+    this.classList.toggle("active");
+  });
+
+  // tutup dropdown kalau klik di luar
+  document.addEventListener("click", function() {
+    document.querySelector(".user").classList.remove("active");
+  });
+
+  // fungsi logout
+  function logout() {
+    alert("Anda berhasil keluar!");
+    window.location.href = "/login.html"; // arahkan ke halaman login
+  }
+</script>
+
+
 
 
   <div class="container">

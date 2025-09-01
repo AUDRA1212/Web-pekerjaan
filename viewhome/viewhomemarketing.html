@@ -15,9 +15,31 @@
     <a href="/riwayat/riwayat.html">Riwayat</a>
     <a href="/profile/profile.html">Profile</a>
     <a href="/pesanan/pesanan.html">Pesanan</a>
-    <div class="user">👤</div>
-  </nav>
+    <div class="user">👤
+        <div class="dropdown">
+        <button onclick="logout()">Keluar</button>
+      </div>
+    </div>
+  </nav>   
 </header>
+<script>
+  // toggle dropdown kalau user diklik
+  document.querySelector(".user").addEventListener("click", function(e) {
+    e.stopPropagation();
+    this.classList.toggle("active");
+  });
+
+  // tutup dropdown kalau klik di luar
+  document.addEventListener("click", function() {
+    document.querySelector(".user").classList.remove("active");
+  });
+
+  // fungsi logout
+  function logout() {
+    alert("Anda berhasil keluar!");
+    window.location.href = "/login.html"; // arahkan ke halaman login
+  }
+</script>
 
     <!-- Gambar Placeholder -->
 <div class="image-placeholder">
@@ -78,6 +100,40 @@ nav a {
   font-size: 20px;
   cursor: pointer;
 }
+  /* dropdown */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 40px;
+      right: 0;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 10px;
+      z-index: 1000;
+    }
+
+    .dropdown button {
+      background: none;
+      border: none;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 6px 12px;
+      border-radius: 6px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .dropdown button:hover {
+      background: #f5f5f5;
+    }
+
+    /* aktifkan dropdown */
+    .user.active .dropdown {
+      display: block;
+    }
 
 
 
